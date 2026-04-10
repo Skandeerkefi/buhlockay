@@ -7,17 +7,17 @@ export function Footer() {
 	const currentYear = new Date().getFullYear();
 
 	return (
-		<footer className='py-6 mt-16 border-t border-[#381835] bg-black text-white'>
+		<footer className='py-6 mt-16 border-t border-[#000000] bg-black text-white'>
 			<div className='container mx-auto'>
 				<div className='grid grid-cols-1 gap-8 md:grid-cols-4'>
 					{/* About */}
 					<div>
-						<h3 className='mb-3 text-lg font-bold text-white'>Bswrxsti</h3>
+						<h3 className='mb-3 text-lg font-bold text-white'>Buhlockay</h3>
 						<p className='text-sm text-white/80'>
-							Join Bswrxsti&apos;s community for exciting gambling streams,
+							Join Buhlockay&apos;s community for exciting gambling streams,
 							giveaways, and more. Use affiliate code{" "}
-							<span className='font-semibold text-[#D2758F]'>bswrxsti</span> on
-							Roobet.
+							<span className='font-semibold text-[#8EFFFF]'>buhlockay</span> on
+							BC.Game.
 						</p>
 					</div>
 
@@ -27,25 +27,25 @@ export function Footer() {
 						<div className='grid grid-cols-2 gap-2'>
 							<Link
 								to='/'
-								className='text-sm text-white/70 transition-colors hover:text-[#D2758F]'
+								className='text-sm text-white/70 transition-colors hover:text-[#004F8E]'
 							>
 								Home
 							</Link>
 							<Link
 								to='/leaderboard'
-								className='text-sm text-white/70 transition-colors hover:text-[#D2758F]'
+								className='text-sm text-white/70 transition-colors hover:text-[#004F8E]'
 							>
 								Leaderboard
 							</Link>
 							<Link
 								to='/terms'
-								className='text-sm text-white/70 transition-colors hover:text-[#D2758F]'
+								className='text-sm text-white/70 transition-colors hover:text-[#004F8E]'
 							>
 								Terms & Conditions
 							</Link>
 							<Link
 								to='/privacy'
-								className='text-sm text-white/70 transition-colors hover:text-[#D2758F]'
+								className='text-sm text-white/70 transition-colors hover:text-[#004F8E]'
 							>
 								Privacy Policy
 							</Link>
@@ -57,38 +57,38 @@ export function Footer() {
 						<h3 className='mb-3 text-lg font-bold text-white'>Connect</h3>
 						<div className='flex flex-wrap gap-3'>
 							<a
-								href='https://kick.com/bswrxsti'
+								href='https://kick.com/buhlockay'
 								target='_blank'
 								rel='noreferrer'
-								className='flex items-center justify-center transition-colors bg-[#381835] rounded-full w-9 h-9 hover:bg-[#D2758F] text-white'
+								className='flex items-center justify-center transition-colors bg-[#000000] rounded-full w-9 h-9 hover:bg-[#004F8E] text-white'
 							>
 								<FaKickstarterK className='w-5 h-5' />
 							</a>
 							<a
-								href='https://x.com/Bswrxsti'
+								href='https://x.com/buhlockay'
 								target='_blank'
 								rel='noreferrer'
-								className='flex items-center justify-center transition-colors bg-[#381835] rounded-full w-9 h-9 hover:bg-[#D2758F] text-white'
+								className='flex items-center justify-center transition-colors bg-[#000000] rounded-full w-9 h-9 hover:bg-[#004F8E] text-white'
 							>
 								<FaXTwitter className='w-5 h-5' />
 							</a>
 							<a
-								href='https://www.youtube.com/@RoobetBrandon-Bswrxsti'
+								href='https://www.youtube.com/@buhlockay'
 								target='_blank'
 								rel='noreferrer'
-								className='flex items-center justify-center transition-colors bg-[#381835] rounded-full w-9 h-9 hover:bg-[#D2758F] text-white'
+								className='flex items-center justify-center transition-colors bg-[#000000] rounded-full w-9 h-9 hover:bg-[#004F8E] text-white'
 							>
 								<FaYoutube className='w-5 h-5' />
 							</a>
 							<a
-								href='https://roobet.com/?ref=bswrxsti'
+								href='https://bc.game/i-buhlockay-n/'
 								target='_blank'
 								rel='noreferrer'
-								className='flex items-center justify-center transition-colors bg-[#381835] rounded-full w-9 h-9 hover:bg-[#D2758F] p-1'
+								className='flex items-center justify-center transition-colors bg-[#000000] rounded-full w-9 h-9 hover:bg-[#004F8E] p-1'
 							>
 								<img
-									src='https://i.ibb.co/4w1vNNHT/65c0f428cc0de4676934f8d5-logob.png'
-									alt='Roobet'
+									src='https://i.ibb.co/bg9jhGLs/3dgifmaker54349.gif'
+									alt='BC.Game'
 									className='object-contain w-full h-full'
 								/>
 							</a>
@@ -96,8 +96,8 @@ export function Footer() {
 					</div>
 
 					{/* Gambling Warning */}
-					<div className='md:pl-6 border-l border-[#381835]'>
-						<h4 className='text-lg font-bold text-[#D2758F] mb-2'>
+					<div className='md:pl-6 border-l border-[#000000]'>
+						<h4 className='text-lg font-bold text-[#004F8E] mb-2'>
 							BEWARE GAMBLING
 						</h4>
 						<p className='text-sm text-white/80 leading-relaxed'>
@@ -113,16 +113,16 @@ export function Footer() {
 				</div>
 
 				{/* Bottom Bar */}
-				<div className='pt-4 mt-8 text-sm text-center text-white/70 border-t border-[#381835]'>
+				<div className='pt-4 mt-8 text-sm text-center text-white/70 border-t border-[#000000]'>
 					<p className='flex flex-wrap items-center justify-center gap-1 text-sm'>
-						© {currentYear} Bswrxsti. Made with
-						<Heart className='w-3 h-3 mx-1 text-[#D2758F]' />
+						© {currentYear} Buhlockay. Made with
+						<Heart className='w-3 h-3 mx-1 text-[#004F8E]' />
 						for the community by{" "}
 						<a
 							href='https://www.linkedin.com/in/skander-kefi/'
 							target='_blank'
 							rel='noreferrer'
-							className='font-medium text-white hover:text-[#D2758F]'
+							className='font-medium text-white hover:text-[#004F8E]'
 						>
 							Skander
 						</a>

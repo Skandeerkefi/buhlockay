@@ -68,12 +68,12 @@ const CSGOLeadPage = () => {
       <Navbar />
 
       <main className="container flex-grow p-4 mx-auto">
-        <h1 className="mb-4 text-5xl font-extrabold text-center text-[#D2758F] drop-shadow-lg">
+        <h1 className="mb-4 text-5xl font-extrabold text-center text-[#004F8E] drop-shadow-lg">
           🔥 CSGOWin 1K Leaderboard 🔥
         </h1>
 
         <p className="text-center text-gray-400 mb-2">
-          Range: <span className="text-[#D2758F]">{displayRange}</span>
+          Range: <span className="text-[#004F8E]">{displayRange}</span>
         </p>
 
         <p className="text-center text-md font-semibold text-gray-300 mb-6">
@@ -81,7 +81,7 @@ const CSGOLeadPage = () => {
         </p>
 
         <div className="mt-2 text-center text-gray-400">
-          <p className="text-lg font-semibold text-[#D2758F]">
+          <p className="text-lg font-semibold text-[#004F8E]">
             Total Prize Pool: {totalPrize.toLocaleString()} C 💰
           </p>
           <p>
@@ -90,12 +90,12 @@ const CSGOLeadPage = () => {
         </div>
 
         {loading && <p className="mt-10 text-center text-gray-400">Loading...</p>}
-        {error && <p className="mt-10 text-center text-[#D2758F]">{error}</p>}
+        {error && <p className="mt-10 text-center text-[#004F8E]">{error}</p>}
 
         {!loading && !error && (
           <div className="mt-8 overflow-x-auto">
-            <table className="min-w-full text-sm bg-gray-900 border border-[#D2758F] shadow-xl rounded-2xl">
-              <thead className="text-white bg-gradient-to-r from-[#381835] to-black">
+            <table className="min-w-full text-sm bg-gray-900 border border-[#004F8E] shadow-xl rounded-2xl">
+              <thead className="text-white bg-gradient-to-r from-[#000000] to-black">
                 <tr>
                   <th className="p-3 text-left uppercase">#</th>
                   <th className="p-3 text-left uppercase">Name</th>
@@ -111,16 +111,16 @@ const CSGOLeadPage = () => {
                       key={entry.rank}
                       className={`transition-all ${
                         entry.rank <= 3
-                          ? "bg-[#381835]/60 hover:bg-[#D2758F]"
+                          ? "bg-[#000000]/60 hover:bg-[#004F8E]"
                           : entry.rank % 2 === 0
                           ? "bg-gray-800"
                           : "bg-gray-900"
                       } hover:text-white`}
                     >
-                      <td className="p-3 font-bold text-[#D2758F]">#{idx + 1}</td>
+                      <td className="p-3 font-bold text-[#004F8E]">#{idx + 1}</td>
 
                       <td className="p-3 font-medium">{entry.name}</td>
-                      <td className="p-3 font-semibold text-[#D2758F]">
+                      <td className="p-3 font-semibold text-[#004F8E]">
                         {entry.wagered.toLocaleString()}
                       </td>
                       <td className="p-3 font-semibold text-yellow-400">
@@ -134,15 +134,15 @@ const CSGOLeadPage = () => {
                       key={idx}
                       className={`transition-all ${
                         idx < 3
-                          ? "bg-[#381835]/60 hover:bg-[#D2758F]"
+                          ? "bg-[#000000]/60 hover:bg-[#004F8E]"
                           : idx % 2 === 0
                           ? "bg-gray-800"
                           : "bg-gray-900"
                       } hover:text-white`}
                     >
-                      <td className="p-3 font-bold text-[#D2758F]">#{idx + 1}</td>
+                      <td className="p-3 font-bold text-[#004F8E]">#{idx + 1}</td>
                       <td className="p-3 font-medium">—</td>
-                      <td className="p-3 font-semibold text-[#D2758F]">0</td>
+                      <td className="p-3 font-semibold text-[#004F8E]">0</td>
                       <td className="p-3 font-semibold text-yellow-400">
                         {p.toLocaleString()} C
                       </td>

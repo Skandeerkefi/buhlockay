@@ -61,7 +61,7 @@ function LeaderboardPage() {
 			<main className='container relative z-10 flex-grow max-w-6xl px-6 py-12 mx-auto'>
 				{/* Header */}
 				<div className='flex flex-col items-center justify-between gap-4 mb-10 sm:flex-row'>
-					<div className='flex items-center gap-3 text-[#D2758F]'>
+					<div className='flex items-center gap-3 text-[#004F8E]'>
 						<Crown className='w-7 h-7' />
 						<h1 className='text-3xl font-extrabold tracking-tight'>
 							Rainbet Bi-Weekly Leaderboard
@@ -72,14 +72,14 @@ function LeaderboardPage() {
 						<Tooltip>
 							<TooltipTrigger asChild>
 								<button
-									className='flex items-center gap-1 text-sm font-semibold text-[#D2758F] hover:text-[#D2758F] transition-colors'
+									className='flex items-center gap-1 text-sm font-semibold text-[#004F8E] hover:text-[#004F8E] transition-colors'
 									aria-label='How the leaderboard works'
 								>
 									<Info className='w-5 h-5' />
 									How It Works
 								</button>
 							</TooltipTrigger>
-							<TooltipContent className='max-w-xs bg-[#0E0D1D] text-white border border-[#D2758F] shadow-lg rounded-md p-3 text-sm'>
+							<TooltipContent className='max-w-xs bg-[#000000] text-white border border-[#004F8E] shadow-lg rounded-md p-3 text-sm'>
 								The leaderboard ranks players based on their total wager amount
 								using the MisterTee affiliate code on Rainbet. Higher wagers
 								result in a better ranking.
@@ -89,23 +89,23 @@ function LeaderboardPage() {
 				</div>
 
 				{/* Affiliate Info */}
-				<div className='p-6 mb-10 rounded-lg bg-gray-300/20 border border-[#D2758F] text-white shadow-md'>
+				<div className='p-6 mb-10 rounded-lg bg-gray-300/20 border border-[#004F8E] text-white shadow-md'>
 					<p className='mb-4 leading-relaxed text-gray-100'>
 						Use affiliate code{" "}
-						<span className='font-semibold text-[#D2758F]'>MisterTee</span> on{" "}
+						<span className='font-semibold text-[#004F8E]'>MisterTee</span> on{" "}
 						<a
 							href='https://rainbet.com'
 							target='_blank'
 							rel='noreferrer'
-							className='text-[#D2758F] hover:underline'
+							className='text-[#004F8E] hover:underline'
 						>
 							Rainbet
 						</a>{" "}
 						to appear on this leaderboard and compete for rewards!
 					</p>
 
-					<div className='inline-flex items-center gap-3 rounded-md bg-[#D2758F]/30 px-4 py-2 w-max select-text'>
-						<span className='font-semibold text-[#D2758F]'>
+					<div className='inline-flex items-center gap-3 rounded-md bg-[#004F8E]/30 px-4 py-2 w-max select-text'>
+						<span className='font-semibold text-[#004F8E]'>
 							Affiliate Code:
 						</span>
 						<span className='font-bold text-white'>MisterTee</span>
@@ -116,7 +116,7 @@ function LeaderboardPage() {
 				{error && (
 					<Alert
 						variant='destructive'
-						className='mb-8 bg-[#D2758F]/40 border-[#D2758F] text-white shadow-md'
+						className='mb-8 bg-[#004F8E]/40 border-[#004F8E] text-white shadow-md'
 					>
 						<AlertDescription>
 							Failed to load leaderboard: {error}
@@ -126,7 +126,7 @@ function LeaderboardPage() {
 
 				{/* Reward Cards */}
 				<section className='mb-12'>
-					<h2 className='mb-8 text-3xl font-bold text-center text-[#D2758F] tracking-wide'>
+					<h2 className='mb-8 text-3xl font-bold text-center text-[#004F8E] tracking-wide'>
 						Top Players
 					</h2>
 					<div className='grid grid-cols-1 gap-8 md:grid-cols-3'>
@@ -135,7 +135,7 @@ function LeaderboardPage() {
 								<RewardCard
 									position='2nd Place'
 									reward='$250 Cash + Special Role'
-									backgroundColor='from-[#381835] to-[#D2758F]'
+									backgroundColor='from-[#000000] to-[#004F8E]'
 									player={monthlyLeaderboard[1]}
 									icon={<Award className='text-yellow-400 w-9 h-9' />}
 									lightBg
@@ -143,7 +143,7 @@ function LeaderboardPage() {
 								<RewardCard
 									position='1st Place'
 									reward='$500 Cash + Special Role'
-									backgroundColor='from-[#D2758F] to-[#381835]'
+									backgroundColor='from-[#004F8E] to-[#000000]'
 									player={monthlyLeaderboard[0]}
 									icon={<Trophy className='w-10 h-10 text-yellow-300' />}
 									lightBg
@@ -151,7 +151,7 @@ function LeaderboardPage() {
 								<RewardCard
 									position='3rd Place'
 									reward='$100 Cash + Special Role'
-									backgroundColor='from-[#381835] to-[#0E0D1D]'
+									backgroundColor='from-[#000000] to-[#000000]'
 									player={monthlyLeaderboard[2]}
 									icon={<Medal className='w-8 h-8 text-yellow-500' />}
 									lightBg
@@ -162,21 +162,21 @@ function LeaderboardPage() {
 								<RewardCard
 									position='1st Place'
 									reward='$500 Cash + Special Role'
-									backgroundColor='from-[#D2758F] to-[#381835]'
+									backgroundColor='from-[#004F8E] to-[#000000]'
 									icon={<Trophy className='w-10 h-10 text-yellow-300' />}
 									lightBg
 								/>
 								<RewardCard
 									position='2nd Place'
 									reward='$250 Cash + Special Role'
-									backgroundColor='from-[#381835] to-[#D2758F]'
+									backgroundColor='from-[#000000] to-[#004F8E]'
 									icon={<Award className='text-yellow-400 w-9 h-9' />}
 									lightBg
 								/>
 								<RewardCard
 									position='3rd Place'
 									reward='$100 Cash + Special Role'
-									backgroundColor='from-[#381835] to-[#0E0D1D]'
+									backgroundColor='from-[#000000] to-[#000000]'
 									icon={<Medal className='w-8 h-8 text-yellow-500' />}
 									lightBg
 								/>
@@ -188,7 +188,7 @@ function LeaderboardPage() {
 				{/* Leaderboard Table */}
 				<section>
 					<div className='flex flex-col items-center justify-center mb-6'>
-						<h2 className='text-2xl font-semibold text-center text-[#D2758F] border-2 border-[#D2758F] rounded-md py-2 px-8 inline-block'>
+						<h2 className='text-2xl font-semibold text-center text-[#004F8E] border-2 border-[#004F8E] rounded-md py-2 px-8 inline-block'>
 						Bi-Weekly Leaderboard
 					</h2>
 					<p className='mt-2 text-sm text-gray-300 select-none'>
@@ -199,7 +199,7 @@ function LeaderboardPage() {
 
 				{isLoading ? (
 					<div className='flex items-center justify-center h-52'>
-						<Loader2 className='w-10 h-10 text-[#D2758F] animate-spin' />
+						<Loader2 className='w-10 h-10 text-[#004F8E] animate-spin' />
 					</div>
 				) : (
 					<LeaderboardTable period='monthly' data={monthlyLeaderboard} />
@@ -231,8 +231,8 @@ function RewardCard({
 }: RewardCardProps) {
 	return (
 		<div
-			className={`flex flex-col h-full overflow-hidden rounded-xl shadow-lg border border-[#D2758F] ${
-				lightBg ? "bg-gray-300/20 text-[#FEFDDE]" : "text-white"
+			className={`flex flex-col h-full overflow-hidden rounded-xl shadow-lg border border-[#004F8E] ${
+				lightBg ? "bg-gray-300/20 text-[#C4C4C4]" : "text-white"
 			}`}
 			style={{
 				background: lightBg
@@ -260,8 +260,8 @@ function RewardCard({
 							<Button
 								className={`w-full ${
 									lightBg
-										? "bg-[#D2758F] hover:bg-[#381835] text-black font-semibold"
-										: "bg-[#D2758F] hover:bg-[#381835] text-black font-semibold"
+										? "bg-[#004F8E] hover:bg-[#000000] text-black font-semibold"
+										: "bg-[#004F8E] hover:bg-[#000000] text-black font-semibold"
 								}`}
 							>
 								Claim Prize

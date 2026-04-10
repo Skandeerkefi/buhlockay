@@ -43,7 +43,7 @@ export function SlotCallCard({
 	const showBonusInput = isUserView && x250Hit && !bonusCall;
 
 	return (
-		<div className='flex flex-col p-4 rounded-lg glass-card bg-[#0E0D1D] border border-[#D2758F] text-[#FEFDDE]'>
+		<div className='flex flex-col p-4 rounded-lg glass-card bg-[#000000] border border-[#004F8E] text-[#C4C4C4]'>
 			{/* Header */}
 			<div className='flex items-start justify-between'>
 				<h3 className='text-lg font-bold'>{slotName}</h3>
@@ -51,12 +51,12 @@ export function SlotCallCard({
 			</div>
 
 			{/* Requester */}
-			<div className='mt-2 text-sm text-[#D2758F]'>
-				Requested by: <span className='text-[#FEFDDE]'>{requester}</span>
+			<div className='mt-2 text-sm text-[#004F8E]'>
+				Requested by: <span className='text-[#C4C4C4]'>{requester}</span>
 			</div>
 
 			{/* Time */}
-			<div className='flex items-center gap-1 mt-4 text-xs text-[#FEFDDE]/70'>
+			<div className='flex items-center gap-1 mt-4 text-xs text-[#C4C4C4]/70'>
 				<Clock className='w-3 h-3' />
 				{timestamp}
 			</div>
@@ -64,7 +64,7 @@ export function SlotCallCard({
 			{/* Admin Controls */}
 			{isAdminView && (
 				<div className='mt-4 space-y-2'>
-					<label className='flex items-center gap-2 text-sm text-[#D2758F]'>
+					<label className='flex items-center gap-2 text-sm text-[#004F8E]'>
 						<input
 							type='checkbox'
 							checked={x250Hit || false}
@@ -85,7 +85,7 @@ export function SlotCallCard({
 
 							<button
 								onClick={() => onReject?.(id)}
-								className='flex items-center justify-center flex-1 gap-1 px-3 py-1 text-sm bg-[#D2758F] rounded hover:bg-[#D2758F]'
+								className='flex items-center justify-center flex-1 gap-1 px-3 py-1 text-sm bg-[#004F8E] rounded hover:bg-[#004F8E]'
 							>
 								<X className='w-4 h-4' /> Reject
 							</button>
@@ -95,7 +95,7 @@ export function SlotCallCard({
 					{(status === "accepted" || status === "pending") && (
 						<button
 							onClick={() => onMarkPlayed?.(id)}
-							className='w-full py-1 mt-2 bg-[#D2758F] hover:bg-[#381835] text-[#FEFDDE] rounded'
+							className='w-full py-1 mt-2 bg-[#004F8E] hover:bg-[#000000] text-[#C4C4C4] rounded'
 						>
 							Mark as Played
 						</button>
@@ -112,7 +112,7 @@ export function SlotCallCard({
 								onDelete?.(id);
 							}
 						}}
-						className='w-full py-1 mt-2 bg-[#381835] rounded hover:bg-[#D2758F]'
+						className='w-full py-1 mt-2 bg-[#000000] rounded hover:bg-[#004F8E]'
 					>
 						Delete
 					</button>
@@ -121,17 +121,17 @@ export function SlotCallCard({
 
 			{/* Bonus Call Submitted */}
 			{bonusCall && (
-				<div className='mt-4 text-sm text-[#D2758F]'>
+				<div className='mt-4 text-sm text-[#004F8E]'>
 					<Gift className='inline w-4 h-4 mr-1' />
 					Bonus Call:{" "}
-					<span className='font-semibold text-[#FEFDDE]'>{bonusCall.name}</span>
+					<span className='font-semibold text-[#C4C4C4]'>{bonusCall.name}</span>
 				</div>
 			)}
 
 			{/* Bonus Call Submission */}
 			{showBonusInput && (
 				<div className='mt-4 space-y-2'>
-					<label htmlFor={`bonus-${id}`} className='text-sm text-[#D2758F]'>
+					<label htmlFor={`bonus-${id}`} className='text-sm text-[#004F8E]'>
 						🎁 20$ Bonus Call Slot Name
 					</label>
 					<input
@@ -140,13 +140,13 @@ export function SlotCallCard({
 						placeholder='e.g. Sugar Rush'
 						value={bonusInput}
 						onChange={(e) => setBonusInput(e.target.value)}
-						className='w-full px-3 py-1 bg-[#0E0D1D] border border-[#D2758F] text-[#FEFDDE] rounded'
+						className='w-full px-3 py-1 bg-[#000000] border border-[#004F8E] text-[#C4C4C4] rounded'
 					/>
 					<button
 						onClick={() =>
 							bonusInput.trim() && onBonusSubmit?.(id, bonusInput.trim())
 						}
-						className='w-full py-1 mt-1 bg-[#D2758F] hover:bg-[#381835] text-[#FEFDDE] rounded'
+						className='w-full py-1 mt-1 bg-[#004F8E] hover:bg-[#000000] text-[#C4C4C4] rounded'
 					>
 						Submit Bonus Call
 					</button>
@@ -164,7 +164,7 @@ function StatusBadge({ status }: { status: SlotCallStatus }) {
 		case "pending":
 			return (
 				<span
-					className={`${baseClass} text-[#D2758F] border-[#D2758F] bg-red-400/20`}
+					className={`${baseClass} text-[#004F8E] border-[#004F8E] bg-red-400/20`}
 				>
 					Pending
 				</span>
@@ -180,7 +180,7 @@ function StatusBadge({ status }: { status: SlotCallStatus }) {
 		case "played":
 			return (
 				<span
-					className={`${baseClass} text-[#FEFDDE] border-[#FEFDDE] bg-[#FEFDDE]/20`}
+					className={`${baseClass} text-[#C4C4C4] border-[#C4C4C4] bg-[#C4C4C4]/20`}
 				>
 					Played
 				</span>
@@ -189,7 +189,7 @@ function StatusBadge({ status }: { status: SlotCallStatus }) {
 		default:
 			return (
 				<span
-					className={`${baseClass} text-[#D2758F] border-[#D2758F] bg-red-500/20`}
+					className={`${baseClass} text-[#004F8E] border-[#004F8E] bg-red-500/20`}
 				>
 					Rejected
 				</span>

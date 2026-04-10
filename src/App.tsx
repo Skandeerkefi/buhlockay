@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomePage from "@/pages/HomePage";
-import LeaderboardPage from "@/pages/LeaderboardPage";
 import SlotCallsPage from "@/pages/SlotCallsPage";
 import GiveawaysPage from "@/pages/GiveawaysPage";
 import LoginPage from "@/pages/LoginPage";
@@ -12,11 +11,12 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { useAuthStore } from "@/store/useAuthStore";
 import SlotOverlay from "@/pages/SlotOverlay";
 import BonusHuntPage from "@/pages/BonusHuntPage";
-import RoobetPage from "@/pages/RoobetPage";
+import RoobetPage from "./pages/RoobetPage";
 import RainPage from "@/pages/RainPage";
 import CSGOLeadPage from "./pages/CSGOLead";
 import PackdrawPage from "./pages/PackdrawPage";
 import ClashLeaderboardPage from "./pages/ClashLeaderboardPage";
+import RewardsPage from "./pages/RewardsPage";
 function App() {
 	const loadFromStorage = useAuthStore((state) => state.loadFromStorage);
 	const user = useAuthStore((state) => state.user);
@@ -39,15 +39,17 @@ function App() {
 			<BrowserRouter>
 				<Routes>
 					<Route path='/' element={<HomePage />} />
-					<Route path='/leaderboard' element={<CSGOLeadPage />} />
+					<Route path='/leaderboard' element={<RoobetPage />} />
+					<Route path='/leaderboards' element={<RoobetPage />} />
 					<Route path='/slot-calls' element={<SlotCallsPage />} />
 					<Route path='/giveaways' element={<GiveawaysPage />} />
+					<Route path='/rewards' element={<RewardsPage />} />
 					<Route path='/login' element={<LoginPage />} />
-					<Route path='/signup' element={<SignupPage />} />s
+					<Route path='/signup' element={<SignupPage />} />
 					<Route path='*' element={<NotFoundPage />} />
 					<Route path='/slot-overlay' element={<SlotOverlay />} />
 					<Route path='/bonus-hunt' element={<BonusHuntPage />} />
-					<Route path='/Leaderboards' element={<RoobetPage />} />
+					<Route path='/csgowin' element={<CSGOLeadPage />} />
 					<Route path='/rain' element={<RainPage />} />
 					<Route path='/clash' element={<ClashLeaderboardPage />} />
 					<Route path='/packdraw' element={<PackdrawPage />} />

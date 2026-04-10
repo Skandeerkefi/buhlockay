@@ -80,36 +80,36 @@ function GiveawaysPage() {
 
 			<main className='container relative z-10 flex-grow max-w-6xl px-4 py-8 mx-auto'>
 				<div className='flex items-center gap-2 mb-8'>
-					<Gift className='w-6 h-6 text-[#FEFDDE]' />
+					<Gift className='w-6 h-6 text-[#C4C4C4]' />
 					<h1 className='text-3xl font-bold'>Giveaways</h1>
 				</div>
 
-				<div className='p-6 mb-8 rounded-lg bg-[#0E0D1D] border border-[#D2758F]'>
-					<p className='mb-6 text-[#FEFDDE]'>
-						Join Bswrxsti&apos;s exciting giveaways for a chance to win real
+				<div className='p-6 mb-8 rounded-lg bg-[#000000] border border-[#004F8E]'>
+					<p className='mb-6 text-[#C4C4C4]'>
+						Join Buhlockay&apos;s exciting giveaways for a chance to win real
 						prizes! New opportunities every week.
 					</p>
 
 					{user?.role === "admin" && (
 						<div className='mb-6'>
-							<h2 className='mb-2 font-semibold text-[#FEFDDE]'>
+							<h2 className='mb-2 font-semibold text-[#C4C4C4]'>
 								Create New Giveaway
 							</h2>
 							<Input
 								placeholder='Title'
 								value={newTitle}
 								onChange={(e) => setNewTitle(e.target.value)}
-								className='mb-2 bg-[#FEFDDE] border border-[#D2758F] text-black placeholder:text-[#D2758F]'
+								className='mb-2 bg-[#C4C4C4] border border-[#004F8E] text-black placeholder:text-[#004F8E]'
 							/>
 							<Input
 								type='datetime-local'
 								value={newEndTime}
 								onChange={(e) => setNewEndTime(e.target.value)}
-								className='mb-2 bg-[#FEFDDE] border border-[#D2758F] text-black placeholder:text-[#D2758F]'
+								className='mb-2 bg-[#C4C4C4] border border-[#004F8E] text-black placeholder:text-[#004F8E]'
 							/>
 							<Button
 								onClick={handleCreateGiveaway}
-								className='bg-[#FEFDDE] hover:bg-[#D2758F] text-black'
+								className='bg-[#C4C4C4] hover:bg-[#004F8E] text-black'
 							>
 								Create Giveaway
 							</Button>
@@ -118,28 +118,28 @@ function GiveawaysPage() {
 
 					<div className='flex flex-col gap-4 md:flex-row'>
 						<div className='relative flex-1'>
-							<Search className='absolute w-4 h-4 transform -translate-y-1/2 left-3 top-1/2 text-[#0E0D1D]' />
+							<Search className='absolute w-4 h-4 transform -translate-y-1/2 left-3 top-1/2 text-[#000000]' />
 							<Input
 								placeholder='Search giveaways...'
-								className='pl-9 bg-[#FEFDDE] border border-[#D2758F] text-white placeholder:text-[#D2758F]'
+								className='pl-9 bg-[#C4C4C4] border border-[#004F8E] text-white placeholder:text-[#004F8E]'
 								value={searchQuery}
 								onChange={(e) => setSearchQuery(e.target.value)}
 							/>
 						</div>
 
 						<div className='flex items-center gap-2'>
-							<Filter className='w-4 h-4 text-[#FEFDDE]' />
+							<Filter className='w-4 h-4 text-[#C4C4C4]' />
 							<Tabs
 								defaultValue='all'
 								onValueChange={(val) => setFilter(val as any)}
-								className=' border border-[#D2758F] rounded-md'
+								className=' border border-[#004F8E] rounded-md'
 							>
 								<TabsList className='flex space-x-2 bg-black'>
 									{["all", "active", "upcoming", "completed"].map((val) => (
 										<TabsTrigger
 											key={val}
 											value={val}
-											className='text-[#FEFDDE] data-[state=active]:bg-[#FEFDDE] data-[state=active]:text-black'
+											className='text-[#C4C4C4] data-[state=active]:bg-[#C4C4C4] data-[state=active]:text-black'
 										>
 											{val.charAt(0).toUpperCase() + val.slice(1)}
 										</TabsTrigger>
@@ -155,7 +155,7 @@ function GiveawaysPage() {
 						{filteredGiveaways.map((giveaway) => (
 							<div
 								key={giveaway._id}
-								className='p-4 rounded-lg  border border-[#D2758F] shadow-sm'
+								className='p-4 rounded-lg  border border-[#004F8E] shadow-sm'
 							>
 								<GiveawayCard
 									id={giveaway._id}
@@ -169,7 +169,7 @@ function GiveawaysPage() {
 									onEnter={handleEnter}
 								/>
 								{giveaway.winner && (
-									<p className='mt-2 text-sm text-[#D2758F]'>
+									<p className='mt-2 text-sm text-[#004F8E]'>
 										🎉 Winner: <strong>{giveaway.winner.kickUsername}</strong>
 									</p>
 								)}
@@ -179,7 +179,7 @@ function GiveawaysPage() {
 										<Button
 											onClick={() => handleDrawWinner(giveaway._id)}
 											variant='destructive'
-											className='w-full mt-2 bg-[#D2758F] hover:bg-[#D2758F] text-black'
+											className='w-full mt-2 bg-[#004F8E] hover:bg-[#004F8E] text-black'
 										>
 											Draw Winner
 										</Button>
@@ -189,11 +189,11 @@ function GiveawaysPage() {
 					</div>
 				) : (
 					<div className='py-12 text-center'>
-						<Gift className='w-16 h-16 mx-auto mb-4 text-[#D2758F]' />
-						<h2 className='mb-2 text-2xl font-bold text-[#D2758F]'>
+						<Gift className='w-16 h-16 mx-auto mb-4 text-[#004F8E]' />
+						<h2 className='mb-2 text-2xl font-bold text-[#004F8E]'>
 							No Giveaways Found
 						</h2>
-						<p className='text-[#D2758F]'>
+						<p className='text-[#004F8E]'>
 							{searchQuery || filter !== "all"
 								? "No giveaways match your filters."
 								: "Check back soon for exciting giveaways!"}

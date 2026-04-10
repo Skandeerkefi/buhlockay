@@ -54,19 +54,19 @@ function BonusHuntPage() {
 	);
 
 	return (
-		<div className='flex flex-col min-h-screen bg-[#0E0D1D] text-white'>
+		<div className='flex flex-col min-h-screen bg-[#000000] text-white'>
 			<Navbar />
 			<main className='container flex-grow py-8'>
-				<Card className='bg-[#0E0D1D] text-white border border-[#D2758F]/40 p-6'>
+				<Card className='bg-[#000000] text-white border border-[#004F8E]/40 p-6'>
 					<CardHeader>
-						<CardTitle className='text-2xl text-[#D2758F]'>
+						<CardTitle className='text-2xl text-[#004F8E]'>
 							Bonus Hunt Tracker
 						</CardTitle>
 					</CardHeader>
 
 					<CardContent className='space-y-6'>
 						<div>
-							<Label htmlFor='startAmount' className='text-[#D2758F]'>
+							<Label htmlFor='startAmount' className='text-[#004F8E]'>
 								Starting Balance
 							</Label>
 							<Input
@@ -75,26 +75,26 @@ function BonusHuntPage() {
 								placeholder='Enter starting amount'
 								value={startingAmount}
 								onChange={(e) => setStartingAmount(e.target.value)}
-								className='bg-[#0E0D1D] border border-[#D2758F] text-white'
+								className='bg-[#000000] border border-[#004F8E] text-white'
 							/>
 						</div>
 
 						{games.map((game, index) => (
 							<div
 								key={index}
-								className='grid grid-cols-1 md:grid-cols-6 gap-4 items-end border-t border-[#D2758F]/20 pt-4'
+								className='grid grid-cols-1 md:grid-cols-6 gap-4 items-end border-t border-[#004F8E]/20 pt-4'
 							>
 								<div>
-									<Label className='text-[#D2758F]'>Slot Name</Label>
+									<Label className='text-[#004F8E]'>Slot Name</Label>
 									<Input
 										placeholder='Slot name'
 										value={game.slot}
 										onChange={(e) => updateGame(index, "slot", e.target.value)}
-										className='bg-[#0E0D1D] border border-[#D2758F] text-white'
+										className='bg-[#000000] border border-[#004F8E] text-white'
 									/>
 								</div>
 								<div>
-									<Label className='text-[#D2758F]'>Spin Cost</Label>
+									<Label className='text-[#004F8E]'>Spin Cost</Label>
 									<Input
 										placeholder='Spin cost'
 										type='number'
@@ -102,21 +102,21 @@ function BonusHuntPage() {
 										onChange={(e) =>
 											updateGame(index, "spinCost", e.target.value)
 										}
-										className='bg-[#0E0D1D] border border-[#D2758F] text-white'
+										className='bg-[#000000] border border-[#004F8E] text-white'
 									/>
 								</div>
 								<div>
-									<Label className='text-[#D2758F]'># of Spins</Label>
+									<Label className='text-[#004F8E]'># of Spins</Label>
 									<Input
 										placeholder='Spins'
 										type='number'
 										value={game.spins}
 										onChange={(e) => updateGame(index, "spins", e.target.value)}
-										className='bg-[#0E0D1D] border border-[#D2758F] text-white'
+										className='bg-[#000000] border border-[#004F8E] text-white'
 									/>
 								</div>
 								<div>
-									<Label className='text-[#D2758F]'>Winnings</Label>
+									<Label className='text-[#004F8E]'>Winnings</Label>
 									<Input
 										placeholder='Winnings'
 										type='number'
@@ -124,15 +124,15 @@ function BonusHuntPage() {
 										onChange={(e) =>
 											updateGame(index, "winnings", e.target.value)
 										}
-										className='bg-[#0E0D1D] border border-[#D2758F] text-white'
+										className='bg-[#000000] border border-[#004F8E] text-white'
 									/>
 								</div>
 								<div>
-									<Label className='text-[#D2758F]'>Multiplier</Label>
+									<Label className='text-[#004F8E]'>Multiplier</Label>
 									<Input
 										value={game.multi}
 										disabled
-										className='bg-[#0E0D1D] border border-[#D2758F] text-white'
+										className='bg-[#000000] border border-[#004F8E] text-white'
 									/>
 								</div>
 							</div>
@@ -140,7 +140,7 @@ function BonusHuntPage() {
 
 						<Button
 							onClick={addGame}
-							className='bg-[#D2758F] hover:bg-[#381835] text-white'
+							className='bg-[#004F8E] hover:bg-[#000000] text-white'
 						>
 							+ Add Game
 						</Button>
@@ -148,18 +148,18 @@ function BonusHuntPage() {
 						<div className='text-xl font-semibold text-right'>
 							{startingAmount && !isNaN(parseFloat(startingAmount)) ? (
 								totalWinnings < parseFloat(startingAmount) ? (
-									<span className='text-[#D2758F]'>
+									<span className='text-[#004F8E]'>
 										Loss:{" "}
 										{(parseFloat(startingAmount) - totalWinnings).toFixed(2)}
 									</span>
 								) : (
-									<span className='text-[#D2758F]'>
+									<span className='text-[#004F8E]'>
 										Winning:{" "}
 										{(totalWinnings - parseFloat(startingAmount)).toFixed(2)}
 									</span>
 								)
 							) : (
-								<span className='text-[#D2758F]'>
+								<span className='text-[#004F8E]'>
 									Total Winnings: {totalWinnings.toFixed(2)}
 								</span>
 							)}

@@ -77,7 +77,7 @@ export default function SlotOverlay() {
 				className='overflow-hidden border shadow-2xl rounded-3xl'
 				style={{
 					backgroundColor: "#2C2F48",
-					borderColor: "#381835",
+					borderColor: "#000000",
 					backdropFilter: "blur(10px)",
 				}}
 			>
@@ -85,8 +85,8 @@ export default function SlotOverlay() {
 				<div
 					className='py-3 text-lg font-bold tracking-wide text-center text-white rounded-t-3xl'
 					style={{
-						background: "linear-gradient(90deg, #381835, #D2758F)",
-						color: "#FEFDDE",
+						background: "linear-gradient(90deg, #000000, #004F8E)",
+						color: "#C4C4C4",
 						textShadow: "0 0 10px rgba(0, 0, 0, 0.5)",
 					}}
 				>
@@ -110,15 +110,15 @@ export default function SlotOverlay() {
 								}}
 							>
 								<div className='text-white text-[1.1rem] font-semibold'>
-									🎰 <span style={{ color: "#D2758F" }}>@{call.requester}</span>{" "}
+									🎰 <span style={{ color: "#004F8E" }}>@{call.requester}</span>{" "}
 									called{" "}
-									<span style={{ color: "#381835" }}>{call.slotName}</span>
+									<span style={{ color: "#000000" }}>{call.slotName}</span>
 								</div>
 								<div className='text-[#CCCCCC] text-sm mt-1 flex items-center gap-3'>
 									{call.betAmount !== null && (
 										<span>
 											for{" "}
-											<span style={{ color: "#D2758F" }}>
+											<span style={{ color: "#004F8E" }}>
 												${call.betAmount.toLocaleString()}
 											</span>
 										</span>
@@ -127,10 +127,10 @@ export default function SlotOverlay() {
 										<span
 											className='ml-auto text-xs font-bold rounded-full'
 											style={{
-												backgroundColor: "#381835",
-												color: "#FEFDDE",
+												backgroundColor: "#000000",
+												color: "#C4C4C4",
 												padding: "0.2em 0.6em",
-												boxShadow: "0 0 6px #381835",
+												boxShadow: "0 0 6px #000000",
 											}}
 										>
 											💥 250x HIT!
@@ -140,7 +140,7 @@ export default function SlotOverlay() {
 								{call.bonusCallName && (
 									<div
 										className='mt-1 text-sm italic'
-										style={{ color: "#D2758F" }}
+										style={{ color: "#004F8E" }}
 									>
 										Bonus Call:{" "}
 										<span className='font-bold'>{call.bonusCallName}</span>

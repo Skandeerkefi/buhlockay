@@ -60,7 +60,7 @@ export default function RainPage() {
 				<div className='flex justify-center gap-4 mb-6'>
 					<button
 						onClick={handlePrevPeriod}
-						className='px-5 py-2 transition bg-[#D2758F] rounded hover:bg-[#D2758F]'
+						className='px-5 py-2 transition bg-[#004F8E] rounded hover:bg-[#004F8E]'
 					>
 						Previous Period
 					</button>
@@ -73,12 +73,12 @@ export default function RainPage() {
 				</div>
 
 				{loading && <p className='text-center'>Loading...</p>}
-				{error && <p className='text-center text-[#D2758F]'>Error: {error}</p>}
+				{error && <p className='text-center text-[#004F8E]'>Error: {error}</p>}
 
 				{!loading && leaderboard.length > 0 && (
-					<div className='overflow-x-auto border border-[#D2758F] shadow-2xl rounded-xl bg-black'>
+					<div className='overflow-x-auto border border-[#004F8E] shadow-2xl rounded-xl bg-black'>
 						<table className='w-full text-left border-collapse'>
-							<thead className='bg-[#D2758F] text-white'>
+							<thead className='bg-[#004F8E] text-white'>
 								<tr>
 									<th className='p-4 border-b border-white'>Rank</th>
 									<th className='p-4 border-b border-white'>User</th>
@@ -91,7 +91,7 @@ export default function RainPage() {
 										key={user.id}
 										className={`border-b border-white transition ${
 											index % 2 === 0 ? "bg-black/70" : "bg-black/50"
-										} hover:bg-[#D2758F]/20`}
+										} hover:bg-[#004F8E]/20`}
 									>
 										<td className='p-4 font-semibold text-white'>
 											{index + 1}
@@ -104,7 +104,7 @@ export default function RainPage() {
 											/>
 											{user.username}
 										</td>
-										<td className='p-4 font-medium text-[#D2758F]'>
+										<td className='p-4 font-medium text-[#004F8E]'>
 											${Number(user.wagered || 0).toLocaleString()}
 										</td>
 									</tr>
